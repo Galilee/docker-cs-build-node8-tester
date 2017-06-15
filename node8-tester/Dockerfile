@@ -3,7 +3,7 @@ MAINTAINER Gabriel Malet <gmalet@galilee.fr>
 
 ENV NODE_VERSION 8
 
-RUN yum -y install curl bash openssh
+RUN yum -y install wget curl bash openssh
 
 RUN curl --silent --location https://rpm.nodesource.com/setup_${NODE_VERSION}.x | bash - \
     && yum -y install nodejs
