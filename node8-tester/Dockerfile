@@ -14,5 +14,7 @@ RUN wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo \
 RUN mkdir -p /root/.ssh
 COPY resources/ssh_config /root/.ssh/config
 
+COPY resources/.npmrc /root/.npmrc
+
 COPY resources/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
